@@ -19,6 +19,11 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  isAdmin: {
+    type: Boolean,
+    required: true,
+    default: false,
+  }
   // If your user needs more properties, add them here. Don't forget to add them to the typeDefs.js, resolvers.js and the userSeeds.
 });
 

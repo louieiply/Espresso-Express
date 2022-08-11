@@ -2,21 +2,25 @@
   {
     "username": "elliot",
     "email": "elliot@email.com",
-    "password": "password01"
+    "password": "password01",
+    "isAdmin": true
   },
   {
     "username": "dory",
     "email": "dory@email.com",
-    "password": "password01"
+    "password": "password01",
+    "isAdmin": false
   },
   {
     "username": "drew",
     "email": "drew@email.com",
-    "password": "password01"
+    "password": "password01",
+    "isAdmin": false
   },
   {
     "username": "portia",
     "email": "portia@email.com",
-    "password": "password01"
+    "password": "password01",
+    "isAdmin": false
   }
 ]
