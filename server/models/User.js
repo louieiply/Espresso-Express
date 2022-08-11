@@ -23,7 +23,19 @@ const userSchema = new Schema({
     type: Boolean,
     required: true,
     default: false,
-  }
+  },
+  addressId: {
+    type: Schema.Types.ObjectId,
+    ref: 'Address',
+
+
+  },
+  orders: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Order',
+    }
+  ]
   // If your user needs more properties, add them here. Don't forget to add them to the typeDefs.js, resolvers.js and the userSeeds.
 });
 
