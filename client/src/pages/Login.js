@@ -41,53 +41,64 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
-            {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Your email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
 
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
+
+    
+      <div className='h-screen flex bg-black-bg1'>
+          <div className='w-full max-w-md bg-grey m-auto rounded-lg border border-primaryBorder shadow-default py-10 px-16'>
+              <h1 className='text-2xl font-medium  text-primary mt-4 mb-12 text-center'>
+                  Log in to your account 🔐
+              </h1>
+
+
+              <div className="card-body">
+      {data ? (
+        <p>
+          Success! You may now head{' '}
+          <Link to="/">back to the homepage.</Link>
+        </p>
+      ) : (
+              <form onSubmit={handleFormSubmit}>
+                  <div>
+                      <label htmlFor='email'>Email</label>
+                      <input
+                          type='email'
+                          className={`w-full p-2 text-primary border rounded-md outline-none text-sm `}
+                          id='email'
+                          placeholder='Your Email'
+                      />
+                  </div>
+                  <div>
+                      <label htmlFor='password'>Password</label>
+                      <input
+                          type='password'
+                          className={`w-full p-2 text-primary border rounded-md outline-none text-sm `}
+                          id='password'
+                          placeholder='Your Password'
+                      />
+                  </div>
+
+                  <div className='flex justify-center items-center mt-6'>
+                      <button
+                          className={`bg-blue-500 py-2 px-4 text-sm text-black-bold rounded border  focus:outline-none `}
+                      >
+                          Login
+                      </button>
+                      
+                  </div>
+              </form>
+      )}
+       {error && (
+        <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+        
+     
+          {error.message}
         </div>
+      )}
+          </div>
       </div>
-    </main>
+    </div>
+   
   );
 };
 
