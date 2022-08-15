@@ -2,4 +2,31 @@
 
 nav{
     font-family: 'Silkscreen', cursive;
+    padding-right: .5rem!important;
+    padding-left: .5rem!important;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+}
+.main-title{
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+a{
+    text-decoration: underline !important;
+}
+.main-link{
+    text-decoration: underline orange !important;
+}
+.hero-image{
+    position: relative;
+    min-height: calc(100vh - 80px);
+    min-width: 90vw;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+
 }
