@@ -11,9 +11,9 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <nav className="bg-stone-800 border-gray-200 px-2 sm:px-4 py-2.5 ">
+    <nav className="bg-stone-800 border-gray-200 px-2 sm:px-4 lg:py-6">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
-        <Link to="/" className="flex">
+        <Link to="/" className="flex main-link">
           <svg
             className="mr-3 h-10"
             viewBox="0 0 52 72"
@@ -33,7 +33,7 @@ const Header = () => {
               fill="#1C64F2"
             />
           </svg>
-          <span className="self-center text-lg h1 font-semibold whitespace-nowrap text-white">
+          <span className="self-center lg:text-3xl md:text-2xl sm:text-base font-semibold whitespace-nowrap text-white main-title">
             Espresso Express
           </span>
         </Link>
