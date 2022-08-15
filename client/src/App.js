@@ -39,7 +39,6 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Header/>
-        <Container>
           <Routes>
             <Route 
               path="/" 
@@ -62,7 +61,6 @@ function App() {
               element={<NotFound />}
             />
           </Routes>
-        </Container>
       </Router>
     </ApolloProvider>
   );
