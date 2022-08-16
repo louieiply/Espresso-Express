@@ -38,13 +38,14 @@ const Signup = () => {
     }
   };
 
+
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
-            {data ? (
+    <div className='h-screen flex bg-black-bg1'>
+    <div className='w-full max-w-md bg-grey m-auto rounded-lg border border-primaryBorder shadow-default py-10 px-16'>
+        <h1 className='text-2xl font-medium  text-primary mt-4 mb-12 text-center'>
+            Signup
+        </h1>
+        {data ? (
               <p>
                 Success! You may now head{' '}
                 <Link to="/">back to the homepage.</Link>
@@ -75,14 +76,15 @@ const Signup = () => {
                   value={formState.password}
                   onChange={handleChange}
                 />
-                <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
+                <div className='flex justify-center items-center mt-6'>
+                      <button
+                          className={`bg-blue-500 py-2 px-4 text-sm text-black-bold rounded border  focus:outline-none `}
+                      >
+                          Submit
+                      </button>
+                      
+                  </div>
+                </form>
             )}
 
             {error && (
@@ -92,9 +94,9 @@ const Signup = () => {
             )}
           </div>
         </div>
-      </div>
-    </main>
+      
+    
   );
-};
+            };
 
 export default Signup;
