@@ -10,6 +10,7 @@ import Profile from './pages/Profile';
 import NotFound from './pages/Notfound';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Products from './pages/Products';
 
 import Header from './components/Header';
 
@@ -59,6 +60,10 @@ function App() {
             <Route 
               path="*"
               element={<NotFound />}
+            />
+            <Route
+              path="/products"
+              element={<Products/>}
             />
           </Routes>
       </Router>
