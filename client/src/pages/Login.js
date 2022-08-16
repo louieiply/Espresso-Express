@@ -53,6 +53,8 @@ const Login = (props) => {
                           className={`w-full p-2 text-primary border rounded-md outline-none text-sm `}
                           id='email'
                           placeholder='Your Email'
+                          onChange={handleChange}
+                          name="email"
                       />
                   </div>
                   <div>
@@ -62,6 +64,8 @@ const Login = (props) => {
                           className={`w-full p-2 text-primary border rounded-md outline-none text-sm `}
                           id='password'
                           placeholder='Your Password'
+                          onChange={handleChange}
+                          name="password"
                       />
                   </div>
                   <div className='flex justify-center items-center mt-6'>
