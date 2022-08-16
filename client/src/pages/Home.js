@@ -15,7 +15,7 @@ const Home = () => {
           </p>
         </h1>
           <div className="text-center text-white px-6 md:px-12 mt-60">
-            <Link to="/login">
+            <Link to="/Products">
               <button
                 type="button"
                 className="inline-block px-6 py-3 border-2 border-white text-white font-medium text-sm leading-snug uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
