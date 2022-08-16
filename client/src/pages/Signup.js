@@ -52,30 +52,40 @@ const Signup = () => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                <div>
+                <label htmlFor='username'>Username</label>
                 <input
-                  className="form-input"
                   placeholder="Your username"
                   name="username"
                   type="text"
+                  className={`w-full p-2 text-primary border rounded-md outline-none text-sm `}
                   value={formState.name}
                   onChange={handleChange}
                 />
+                </div>
+                <div>
+                  <label htmlFor='email'>Email</label>
                 <input
-                  className="form-input"
                   placeholder="Your email"
                   name="email"
                   type="email"
+                  className={`w-full p-2 text-primary border rounded-md outline-none text-sm `}
                   value={formState.email}
                   onChange={handleChange}
                 />
+                </div>
+                <div>
+                  <label htmlFor='password'>Passsword</label>
                 <input
-                  className="form-input"
+                  
                   placeholder="******"
                   name="password"
                   type="password"
+                  className={`w-full p-2 text-primary border rounded-md outline-none text-sm `}
                   value={formState.password}
                   onChange={handleChange}
                 />
+                </div>
                 <div className='flex justify-center items-center mt-6'>
                       <button
                           className={`bg-blue-500 py-2 px-4 text-sm text-black-bold rounded border  focus:outline-none `}
