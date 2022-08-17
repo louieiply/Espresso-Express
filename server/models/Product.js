@@ -3,10 +3,15 @@ const { Schema, model } = require('mongoose');
 const productSchema = new Schema({
     categoryId: {
         
-                type: Schema.Types.ObjectId,
-                ref: 'Category'
+      type: Schema.Types.ObjectId,
+      ref: 'Category'
     },
     name: {
+      type: String,
+      required: true,
+    },
+
+    image: {
       type: String,
       required: true,
     },
@@ -14,7 +19,7 @@ const productSchema = new Schema({
     description: {
       type: String,
       required: true,
-      maxLength: 200,
+      maxLength: 300,
     },
 
    price: {

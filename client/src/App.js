@@ -11,6 +11,7 @@ import NotFound from './pages/Notfound';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Products from './pages/Products';
+import Product from './pages/Product';
 
 import Header from './components/Header';
 
@@ -64,6 +65,10 @@ function App() {
             <Route
               path="/products"
               element={<Products/>}
+            />
+            <Route
+              path="/product"
+              element={<Product/>}
             />
           </Routes>
       </Router>
