@@ -1,0 +1,23 @@
+[
+    {
+        "categoryName": "Milk",
+        "Description": "Drinkable milk"
+    },
+    {
+        "categoryName": "Coffee Bean",
+        "Description": "Drinkable Coffee Bean"
+    },    {
+        "categoryName": "Ginder",
+        "Description": "Usable Ginder"
+    },    {
+        "categoryName": "Cups",
+        "Description": "Usable Cups"
+    },    {
+        "categoryName": "Coffee Machine",
+        "Description": "Usable Coffee Machine"
+    },    {
+        "categoryName": "Coffee Machine Filter",
+        "Description": "Usable Coffee Machine Filter"
+    }
+  ]
+  

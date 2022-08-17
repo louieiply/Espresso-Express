@@ -1,0 +1,36 @@
+[
+
+    {
+        
+        "name": "Mr Bean",
+        "price": 123,
+        "image": "https://th.bing.com/th/id/OIP.63nJKcjRgT27BZB1WB9RfgHaJ3?pid=ImgDet&rs=1",
+        "description": "Well its Mr Bean."
+    },    {
+        
+        "name": "Brazil Rex Special Bar Coffee Beans 1kg",
+        "price": 40,
+        "image": "https://cdn.shopify.com/s/files/1/0556/0860/6895/products/brazil-rex-coffee-beans-1kg-special-bar-974203_690x862.jpg?v=1625821714",
+        "description": "Brazil Rex was originally created over 50 years ago as a Northern Italian style espresso blend. This famous blend of 100% Arabica coffee beans, predominantly from Brazil, showcases our skill in the art of blending coffee in order to produce a sweet, nutty and well balanced cup."
+    },    {
+        
+        "name": "Cinque Stelle Special Bar Coffee Beans 1kg",
+        "price": 48,
+        "image": "https://cdn.shopify.com/s/files/1/0556/0860/6895/products/cinque-stelle-1kg-coffee-beans-special-bar-466746_690x862.jpg?v=1625821705",
+        "description": "Our premiere and most complex espresso blend. Initially developed as an after dinner espresso this delicious coffee is famously served at some of Australia's most recognised and esteemed hatted restaurants such as Bentley, Monopole and Porteno."
+    },    {
+        
+        "name": "Espresso Coffee Beans 200g",
+        "price": 8,
+        "image": "https://cdn.shopify.com/s/files/1/0556/0860/6895/products/espresso-coffee-beans-200g-142063_690x862.jpg?v=1625821714",
+        "description": "Vittoria's original and iconic blend, Espresso has remained unchanged for over 50 years. This blend of 100% Arabica coffee beans is darkly roasted to deliver the strong flavour of traditional Italian espresso."
+    },
+    {
+        
+        "name": "Decaffeinated Coffee Beans 500g",
+        "price": 30,
+        "image": "https://cdn.shopify.com/s/files/1/0556/0860/6895/products/decaf-coffee-beans-500g-712165_690x862.jpg?v=1655803317",
+        "description": "At Vittoria, our family has been perfecting the way we roast our coffee for over 60 years. We only work with the very best - which is why we only use 100% Arabica beans from all over the world and roast them locally for freshness."
+    }
+  ]
+  
