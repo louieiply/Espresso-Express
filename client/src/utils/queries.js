@@ -24,11 +24,21 @@ query getProduct {
 `
 
 export const QUERY_CATEGORIES= gql`
-query getCategories {
-    Category {
-      _id
-      categoryName
-      description
-    }
+query GetCategories {
+  getCategories {
+    _id
+    categoryName
+    description
+  }
+}
+`
+
+export const QUERY_CATEGORYID= gql`
+query GetCategoryId {
+  GetCategoryId{
+    _id
+    categoryName
+    description
+  }
 }
 `
