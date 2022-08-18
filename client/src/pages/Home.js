@@ -2,7 +2,7 @@ import React from 'react';
 import bgimg from '../images/bg.jpg';
 import { Link } from "react-router-dom";
 import "../components/css/home.css";
-import "../components/js/home.js"
+import "../components/Home/home.js"
 const Home = () => {
 
   return (
