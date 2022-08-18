@@ -32,7 +32,7 @@ const typeDefs = gql`
     users: [User]
     me: User
     getProduct(productId: ID!): Product
-    getProductsByategory(categoryId: ID!): [Product]
+    getProductsByCategory(categoryId: ID!): [Product]
     getCategories: [Category]
   }
 

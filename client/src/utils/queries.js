@@ -32,7 +32,21 @@ query GetCategories {
   }
 }
 `
+export const QUERY_PRODUCTS_BY_CATEGORY=gql`
+query GetProductsByCategory($categoryId: ID!) {
+  getProductsByCategory(categoryId: $categoryId) {
+    _id
+    categoryId
+    name
+    image
+    description
+    price
+  }
+}
 
+
+
+`
 export const QUERY_CATEGORYID= gql`
 query GetCategoryId {
   GetCategoryId{

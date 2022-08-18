@@ -1,12 +1,13 @@
 import React, {useState, setState} from 'react';
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
-import { useMutation, useQuery } from '@apollo/client';
+import { useMutation, useQuery , useLazyQuery} from '@apollo/client';
 import Productitem from '../components/Productitem/Productitem';
-import { QUERY_CATEGORIES, QUERY_PRODUCT } from '../utils/queries';
+import { QUERY_CATEGORIES, QUERY_PRODUCTS_BY_CATEGORY } from '../utils/queries';
 
 const Products = () => {
     const {loading:loadingCategories, data:dataCategories, refetch} = useQuery(QUERY_CATEGORIES);
+    const [getProductsByCategory, {data} ] = useLazyQuery(QUERY_PRODUCTS_BY_CATEGORY);
     // const {loading:loadingProducts, data:dataProducts} = useQuery(QUERY_PRODUCT);
     const [selectedCategory, setSelectedCategory] = useState(null);
     // const getCategories = () => {
@@ -23,9 +24,12 @@ const Products = () => {
     //     return (<a href="#" class="block font-medium text-gray-500 dark:text-gray-300 hover:underline">Milk</a>)
         
     // }
-const handleClick = (category) => {
+const handleClick = async (category) => {
 //    const [selectedCategory,setSelectedCategory]= setState(category)
-     refetch({category: category})
+   await getProductsByCategory({
+    variables:{categoryId:category._id}
+   }) 
+   console.log(data)
 }
     return(
 <div class="">
@@ -52,10 +56,8 @@ const handleClick = (category) => {
                     </div>
 
                     <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                            {/* <Productitem/>
-                            <Productitem/>
-                            <Productitem/>
-                            <Productitem/> */}
+                         {data?.getProductsByCategory?.map(product => <Productitem title={product.name} photoUrl= {product.image} price = {product.price}/>)}
+                         
                     </div>
                 </div>
             </div>

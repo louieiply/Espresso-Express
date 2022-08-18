@@ -16,7 +16,7 @@ const resolvers = {
     getCategories: async () => {
       return Category.find();
     },
-    getProductsByategory: async (parent, {categoryId}) => {
+    getProductsByCategory: async (parent, {categoryId}) => {
       return Product.find({categoryId: categoryId});
     },
     getProduct: async (parent, {productId}) => {
