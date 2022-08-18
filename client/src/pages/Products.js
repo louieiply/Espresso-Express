@@ -3,8 +3,15 @@ import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
 import { useMutation, useQuery } from '@apollo/client';
 import Productitem from '../components/Productitem/Productitem';
+import { QUERY_CATEGORIES, QUERY_PRODUCT } from '../utils/queries';
 
 const Products = () => {
+    const {loadingCategories, dataCategories} = useQuery(QUERY_CATEGORIES);
+    const {loadingProducts, dataProducts} = useQuery(QUERY_PRODUCT);
+    
+    const getCategories = () => {
+        <a href="#" class="block font-medium text-gray-500 dark:text-gray-300 hover:underline">Milk</a>
+    }
 
     return(
 <div class="">

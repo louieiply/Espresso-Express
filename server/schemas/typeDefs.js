@@ -13,9 +13,27 @@ const typeDefs = gql`
     user: User
   }
 
+  type Category {
+    _id: ID
+    categoryName: String!
+    description: String!
+  }
+  
+  type Product {
+    _id: ID
+    categoryId: ID
+    name: String
+    image: String
+    description: String
+    price: Int
+  }
+
   type Query {
     users: [User]
     me: User
+    getProduct(productId: ID!): Product
+    getProductsByategory(categoryId: ID!): [Product]
+    getCategories: [Category]
   }
 
   type Mutation {

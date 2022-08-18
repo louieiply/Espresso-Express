@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Category, Product } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -13,6 +13,15 @@ const resolvers = {
       }
       throw new AuthenticationError('You must be signed in');
     },
+    getCategories: async () => {
+      return Category.find();
+    },
+    getProductsByategory: async (parent, {categoryId}) => {
+      return Product.find({categoryId: categoryId});
+    },
+    getProduct: async (parent, {productId}) => {
+      return Product.findById(productId);
+    }
   },
 
   Mutation: {
