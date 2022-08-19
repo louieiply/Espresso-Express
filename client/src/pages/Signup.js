@@ -40,7 +40,7 @@ const Signup = () => {
 
 
   return (
-    <div className='h-screen bg-gray-900'>
+    <div className='h-screen  flex bg-gray-900'>
     <div className='w-full max-w-md bg-grey m-auto rounded-lg border border-primaryBorder shadow-default py-10 px-16'>
         <h1 className='text-2xl text-white font-medium  text-primary mt-4 mb-12 text-center'>
             Signup
