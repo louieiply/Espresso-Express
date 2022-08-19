@@ -40,9 +40,9 @@ const Signup = () => {
 
 
   return (
-    <div className='h-screen flex bg-black-bg1'>
+    <div className='h-screen bg-gray-900'>
     <div className='w-full max-w-md bg-grey m-auto rounded-lg border border-primaryBorder shadow-default py-10 px-16'>
-        <h1 className='text-2xl font-medium  text-primary mt-4 mb-12 text-center'>
+        <h1 className='text-2xl text-white font-medium  text-primary mt-4 mb-12 text-center'>
             Signup
         </h1>
         {data ? (
@@ -53,7 +53,7 @@ const Signup = () => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <div>
-                <label htmlFor='username'>Username</label>
+                <label className='text-white' htmlFor='username'>Username</label>
                 <input
                   placeholder="Your username"
                   name="username"
@@ -64,7 +64,7 @@ const Signup = () => {
                 />
                 </div>
                 <div>
-                  <label htmlFor='email'>Email</label>
+                  <label className='text-white' htmlFor='email'>Email</label>
                 <input
                   placeholder="Your email"
                   name="email"
@@ -75,7 +75,7 @@ const Signup = () => {
                 />
                 </div>
                 <div>
-                  <label htmlFor='password'>Passsword</label>
+                  <label className='text-white' htmlFor='password'>Passsword</label>
                 <input
                   
                   placeholder="******"

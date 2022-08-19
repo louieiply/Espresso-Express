@@ -33,9 +33,9 @@ const Login = (props) => {
     });
   };
   return (
-      <div className='h-screen flex bg-black-bg1'>
+      <div className='h-screen bg-gray-900'>
           <div className='w-full max-w-md bg-grey m-auto rounded-lg border border-primaryBorder shadow-default py-10 px-16'>
-              <h1 className='text-2xl font-medium  text-primary mt-4 mb-12 text-center'>
+              <h1 className='text-2xl text-white font-medium  text-primary mt-4 mb-12 text-center'>
                   Log in to your account
               </h1>
               <div className="card-body">
@@ -47,7 +47,7 @@ const Login = (props) => {
       ) : (
               <form onSubmit={handleFormSubmit}>
                   <div>
-                      <label htmlFor='email'>Email</label>
+                      <label className='text-white' htmlFor='email'>Email</label>
                       <input
                           type='email'
                           className={`w-full p-2 text-primary border rounded-md outline-none text-sm `}
@@ -58,7 +58,7 @@ const Login = (props) => {
                       />
                   </div>
                   <div>
-                      <label htmlFor='password'>Password</label>
+                      <label className='text-white' htmlFor='password'>Password</label>
                       <input
                           type='password'
                           className={`w-full p-2 text-primary border rounded-md outline-none text-sm `}
