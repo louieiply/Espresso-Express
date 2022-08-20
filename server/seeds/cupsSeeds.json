@@ -1,0 +1,33 @@
+[
+
+    {
+        
+        "name": "Coffee cup Small",
+        "price": 1,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Hz9r_2v6wG7TTpvACwC-8avrC8bygLMTNsRo_kae0boVE2zUr8-cY4D7sv8N-CXClGk&usqp=CAU",
+        "description": "Small Cup"
+    },
+    
+
+        {
+            
+            "name": "Coffee cup Medium",
+            "price": 1,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Hz9r_2v6wG7TTpvACwC-8avrC8bygLMTNsRo_kae0boVE2zUr8-cY4D7sv8N-CXClGk&usqp=CAU",
+            "description": "Medium Cup"
+        } ,
+        
+
+            {
+                
+                "name": "Coffee cup Large",
+                "price": 1,
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Hz9r_2v6wG7TTpvACwC-8avrC8bygLMTNsRo_kae0boVE2zUr8-cY4D7sv8N-CXClGk&usqp=CAU",
+                "description": "Large Cup"
+            }  
+           
+        
+       
+       
+   
+  ]
