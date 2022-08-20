@@ -33,7 +33,7 @@ query GetCategories {
 }
 `
 export const QUERY_PRODUCTS_BY_CATEGORY=gql`
-query GetProductsByCategory($categoryId: ID) {
+query GetProductsByCategory($categoryId: ID!) {
   getProductsByCategory(categoryId: $categoryId) {
     _id
     categoryId
