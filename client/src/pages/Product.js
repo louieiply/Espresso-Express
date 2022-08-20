@@ -1,28 +1,24 @@
 import React from "react";
-import { useQuery } from '@apollo/client';
-import { QUERY_PRODUCT } from "../utils/queries";
+import { useLazyQuery,useQuery } from '@apollo/client';
+import { QUERY_PRODUCT_BY_ID } from "../utils/queries";
+import { useParams } from 'react-router-dom';
 const Product = () => {
-    const {loading, data} = useQuery(QUERY_PRODUCT);
-    if (loading) {
-        return (
-            <>
-                Loading...
-            </>
-        )
-    }
-    const productData = data?.me || {}
+    const {productId} = useParams();
+    console.log(productId);
+    const {loading, error, data} = useQuery(QUERY_PRODUCT_BY_ID, {
+        variables: { productId: "62fd0f1a0bd8d0007a4e0144"},
+    });
+
+    if(loading) return (<h1>loading</h1>);
+    if (error) return (<h1>`Error! {error.message}`</h1>);
+
     return(
-        <>
-            
-            <p>Profile Page</p>
-            Id:{productData._id}
-            <br/>
-            Product Name:{productData.name}
-            <br/>
-            Product description:{productData.name}
-            <br/>
-        </>
-    );
+        <div>
+            <h1>
+                {JSON.stringify(data)}
+            </h1>
+        </div>
+    )
 }
 
 export default Product;
