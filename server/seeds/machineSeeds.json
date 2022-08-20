@@ -1,0 +1,33 @@
+[
+
+    {
+        
+        "name": "Large Commercial Coffee Machine",
+        "price": 26400,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKJMvYYOIiILjVG8GYw6vMlnytzQo89jA0LKRQ9zwzFmXqoVzcHG_b56LqbUBX53x9IQs&usqp=CAU",
+        "description": "A Large top of the range Commercial Coffee Machine"
+    },
+    
+
+        {
+            
+            "name": "Small Coffee Machine",
+            "price": 600,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNm-HNx_OeNyZDtvUYw3ljGba8gbhhLvsmFzVs9W_1_y9tyb1476AfSIG2WVaKNEnHhq8&usqp=CAU",
+            "description": "Small Coffee Machine"
+        } ,
+        
+
+            {
+                
+                "name": "Pod Coffee Machine",
+                "price": 70,
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSlOPntYH5uKlZIT0qKel36o_4R4YM84C7w&usqp=CAU",
+                "description": "Pod Coffee Machine"
+            }  
+           
+        
+       
+       
+   
+  ]
