@@ -4,6 +4,7 @@ import Auth from "../utils/auth";
 import { useMutation, useQuery , useLazyQuery} from '@apollo/client';
 import Productitem from '../components/Productitem/Productitem';
 import { QUERY_CATEGORIES, QUERY_PRODUCTS_BY_CATEGORY } from '../utils/queries';
+import "../components/Products/products.css"
 
 const Products = () => {
     const {loading:loadingCategories, data:dataCategories, refetch} = useQuery(QUERY_CATEGORIES);
@@ -34,9 +35,7 @@ const handleClick = async (category) => {
     return(
 <div className="">
     
-{/* <div className="h-56 grid grid-cols-3 gap-4 content-center"> */}
-{/* </div> */}
-<section className="h-screen bg-white dark:bg-gray-900">
+<section className="min-h-screen light:bg-white dark:bg-gray-900">
         <div className="container px-6 py-10 mx-auto">
             <div className="lg:flex lg:-mx-2">
                 <div className="space-y-3 lg:w-1/5 lg:px-2 lg:space-y-4">
