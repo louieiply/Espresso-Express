@@ -12,7 +12,6 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Products from './pages/Products';
 import Product from './pages/Product';
-
 import Header from './components/Header';
 
 const httpLink = createHttpLink({
@@ -62,14 +61,15 @@ function App() {
               path="*"
               element={<NotFound />}
             />
-            <Route
-              path="/products"
-              element={<Products/>}
-            />
-            <Route
-              path="/product"
-              element={<Product/>}
-            />
+            <Route path="/products" element={<Products/>}/>
+
+            <Route path="/product/:productId" element={<Product/>}/>
+            
+            {/* <Route
+              path="/products/:productId"
+              component={<Product productId="12312321"/>}
+              element
+            /> */}
           </Routes>
       </Router>
     </ApolloProvider>
