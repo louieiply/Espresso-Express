@@ -12,7 +12,7 @@ query Me {
 
 export const QUERY_PRODUCT_BY_ID = gql`
 query GetProductByID($productId: ID!) {
-    Product(productId: $productId) {
+  getProductByID(productId: $productId) {
       _id
       categoryId
       name

@@ -6,9 +6,9 @@ const Product = () => {
     const {productId} = useParams();
     console.log(productId);
     const {loading, error, data} = useQuery(QUERY_PRODUCT_BY_ID, {
-        variables: { productId: "62fd0f1a0bd8d0007a4e0144"},
+        variables: { productId: productId},
     });
-
+    console.log(data);
     if(loading) return (<h1>loading</h1>);
     if (error) return (<h1>`Error! {error.message}`</h1>);
 

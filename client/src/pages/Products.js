@@ -26,10 +26,10 @@ const Products = () => {
     // }
 const handleClick = async (category) => {
 //    const [selectedCategory,setSelectedCategory]= setState(category)
+    console.log(category._id);
    await getProductsByCategory({
     variables:{categoryId:category._id}
    }) 
-   console.log(data)
 }
     return(
 <div className="">
@@ -52,9 +52,6 @@ const handleClick = async (category) => {
                                 <option value="#">Price</option>
                                 <option value="#">Name</option>
                             </select>
-                            <Link to="/item">
-                                Hello World
-                            </Link>
                         </div>
                     </div>
 
