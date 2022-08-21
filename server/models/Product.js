@@ -21,8 +21,12 @@ const productSchema = new Schema({
       required: true,
       maxLength: 300,
     },
-
-   price: {
+    quantity: {
+      type: Number,
+      min: 0,
+      default: 0
+    },
+    price: {
       type: Number,
       required: true,
     },

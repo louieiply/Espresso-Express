@@ -24,8 +24,9 @@ const typeDefs = gql`
     categoryId: ID
     name: String
     image: String
+    quantity: Int
     description: String
-    price: Int
+    price: Float
   }
 
   type Query {
@@ -34,6 +35,7 @@ const typeDefs = gql`
     getProductByID(productId: ID!): Product
     getProductsByCategory(categoryId: ID!): [Product]
     getCategories: [Category]
+    getProducts: [Product]
   }
 
   type Mutation {

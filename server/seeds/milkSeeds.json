@@ -5,7 +5,8 @@
         "name": "Fullcream Milk 2L",
         "price": 3,
         "image": "https://cdn0.woolworths.media/content/wowproductimages/large/044528.jpg",
-        "description": "2L Milk"
+        "description": "2L Milk",
+        "quantity": 5
     }  
    
   ]

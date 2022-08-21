@@ -15,6 +15,7 @@ query GetProductByID($productId: ID!) {
   getProductByID(productId: $productId) {
       _id
       categoryId
+      quantity
       name
       image
       description
@@ -32,11 +33,27 @@ query GetCategories {
   }
 }
 `
+
+export const QUERY_PRODUCTS= gql`
+query GetProducts {
+  getProducts {
+    _id
+      categoryId
+      quantity
+      name
+      image
+      description
+      price
+  }
+}
+`
+
 export const QUERY_PRODUCTS_BY_CATEGORY=gql`
 query GetProductsByCategory($categoryId: ID!) {
   getProductsByCategory(categoryId: $categoryId) {
     _id
     categoryId
+    quantity
     name
     image
     description

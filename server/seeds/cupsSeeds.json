@@ -5,7 +5,8 @@
         "name": "Coffee cup Small",
         "price": 1,
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Hz9r_2v6wG7TTpvACwC-8avrC8bygLMTNsRo_kae0boVE2zUr8-cY4D7sv8N-CXClGk&usqp=CAU",
-        "description": "Small Cup"
+        "description": "Small Cup",
+        "quantity": 20
     },
     
 
@@ -14,7 +15,8 @@
             "name": "Coffee cup Medium",
             "price": 1,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Hz9r_2v6wG7TTpvACwC-8avrC8bygLMTNsRo_kae0boVE2zUr8-cY4D7sv8N-CXClGk&usqp=CAU",
-            "description": "Medium Cup"
+            "description": "Medium Cup",
+            "quantity": 20
         } ,
         
 
@@ -23,7 +25,8 @@
                 "name": "Coffee cup Large",
                 "price": 1,
                 "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Hz9r_2v6wG7TTpvACwC-8avrC8bygLMTNsRo_kae0boVE2zUr8-cY4D7sv8N-CXClGk&usqp=CAU",
-                "description": "Large Cup"
+                "description": "Large Cup",
+                "quantity": 20
             }  
            
         

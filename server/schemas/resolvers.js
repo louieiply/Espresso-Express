@@ -20,6 +20,9 @@ const resolvers = {
       console.log(categoryId);
       return Product.find({categoryId: categoryId});
     },
+    getProducts: async () => {
+      return Product.find();
+    },
     getProductByID: async (parent, {productId}) => {
       console.log(productId);
       return Product.findOne({ _id: productId });
