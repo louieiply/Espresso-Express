@@ -76,11 +76,11 @@ const handleClick = async (category) => {
     return(
 <div className="">
     
-<section className="min-h-screen light:bg-white dark:bg-gray-900">
-        <div className="container px-6 py-10 mx-auto">
+<section className="min-h-screen bg-amber-900 dark:bg-gray-800 py-10">
+        <div className="container bg-orange-100 dark:bg-gray-700 px-6 py-10 mx-auto rounded">
             <div className="lg:flex lg:-mx-2">
                 <div className="space-y-3 lg:w-1/5 lg:px-2 lg:space-y-4">
-                    { loadingCategories? <p>Loading...</p>:dataCategories?.getCategories.map(category => <a onClick= {()=> handleClick(category) } href="#" className="block font-medium text-gray-500 dark:text-gray-300 hover:underline">{category.categoryName}</a>)}
+                    { loadingCategories? <p>Loading...</p>:dataCategories?.getCategories.map(category => <a onClick= {()=> handleClick(category) } href="#" className="block font-medium text-gray-700 dark:text-gray-300 hover:underline">{category.categoryName}</a>)}
                 </div>
 
                 <div className="mt-6 lg:mt-0 lg:px-2 lg:w-4/5 ">
