@@ -5,7 +5,8 @@
         "name": "Large Automatic Grinder",
         "price": 390,
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM3zDsuZzNQXiy6wcKdpqwG7sjiBu5SN5oImRwewg6fy39gXkqJM4EaQ1cLnW80yvD0Nc&usqp=CAU",
-        "description": "Automatic Grinder Large"
+        "description": "Automatic Grinder Large",
+        "quantity": 30
     },
     
 
@@ -14,7 +15,8 @@
             "name": "Small Automatic Grinder",
             "price": 120,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_N12mOpt09XI4CfThom88LPxBpQcHsBK8ZUvWn9H45RedCaQwQQTzC4Jbbqf5AxdqElA&usqp=CAU",
-            "description": "Automatic Grinder Small"
+            "description": "Automatic Grinder Small",
+            "quantity": 30
         } ,
         
 
@@ -23,7 +25,8 @@
                 "name": "Small Manual Coffee Grinder",
                 "price": 65,
                 "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP5O2ELMl2SLgRxD2v9Wc-q_ZDfHkaQiUaQRWceP7JmRqSW6Lq974E03TZwh1QDiEY_64&usqp=CAU",
-                "description": "Manual Grinder Small"
+                "description": "Manual Grinder Small",
+                "quantity": 30
             }  
            
         
