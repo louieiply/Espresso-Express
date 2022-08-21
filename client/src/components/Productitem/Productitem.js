@@ -11,7 +11,7 @@ const Productitem = ({ productId ,photoUrl, title,price, description, quantity})
         photo: photoUrl,
         name: title,
         price: price,
-        description: "hehe",
+        description: description,
         quantity: quantity
     }
     const { cart } = state;
@@ -32,7 +32,7 @@ const Productitem = ({ productId ,photoUrl, title,price, description, quantity})
     return(
     <div className="flex flex-col items-center justify-center w-full max-w-lg mx-auto">
         <Link to={`/product/${productId}`}>
-            <img className="object-cover w-full h-72 xl:h-80" src={photoUrl} alt="T-Shirt"/>
+            <img className="object-cover w-full h-72 xl:h-80 rounded" src={photoUrl} alt="T-Shirt"/>
         </Link>
         <h4 className="mt-2 text-lg font-medium text-gray-700 dark:text-gray-200 text-center">{title}</h4>
         <h4 className="mt-2 text-sm font-medium text-gray-700 dark:text-gray-200 text-center">{quantity} item in stock</h4>
