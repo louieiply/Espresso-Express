@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ADD_TO_CART } from "../../utils/actions";
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { useStoreContext } from "../../utils/GlobalState";
+import { idbPromise } from "../../utils/helpers";
 
 const Productitem = ({ productId ,photoUrl, title,price, description, quantity}) => {
 
@@ -20,6 +21,15 @@ const Productitem = ({ productId ,photoUrl, title,price, description, quantity})
         const itemInCart = cart.find((cartItem) => cartItem._id === productId)
         if (itemInCart){
             console.log("run");
+            dispatch({
+                type: UPDATE_CART_QUANTITY,
+                _id: productId,
+                purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+            });
+            idbPromise('cart', 'put', {
+                ...itemInCart,
+                purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+              });            
         }
         else {
             dispatch({

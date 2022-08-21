@@ -29,6 +29,10 @@ const typeDefs = gql`
     price: Float
   }
 
+  type Checkout {
+    session: ID
+  }
+
   type Query {
     users: [User]
     me: User
@@ -36,6 +40,7 @@ const typeDefs = gql`
     getProductsByCategory(categoryId: ID!): [Product]
     getCategories: [Category]
     getProducts: [Product]
+    checkout(products: [ID]!): Checkout
   }
 
   type Mutation {
