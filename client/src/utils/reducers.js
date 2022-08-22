@@ -3,12 +3,14 @@ import {
     UPDATE_PRODUCTS,
     ADD_TO_CART,
     UPDATE_CART_QUANTITY,
-    ADD_MULTIPLE_TO_CART
+    REMOVE_FROM_CART,
+    ADD_MULTIPLE_TO_CART,
+    TOGGLE_CART
 } from "./actions";
 
 export const reducer = (state, action) => {
     // console.log(state);
-    switch (action.type){
+    switch (action.type) {
         case UPDATE_PRODUCTS:
             console.log(action);
             return {
@@ -32,11 +34,27 @@ export const reducer = (state, action) => {
                 ...state,
                 cartOpen: true,
                 cart: state.cart.map(product => {
-                    if( action._id === product._id) {
+                    if (action._id === product._id) {
                         product.purchaseQuantity = action.purchaseQuantity
                     }
                     return product
                 })
+            };
+        case REMOVE_FROM_CART:
+            let newState = state.cart.filter(product => {
+                return product._id !== action._id;
+            });
+
+            return {
+                ...state,
+                cartOpen: newState.length > 0,
+                cart: newState
+            };
+
+        case TOGGLE_CART:
+            return {
+                ...state,
+                cartOpen: !state.cartOpen
             };
     }
 }
