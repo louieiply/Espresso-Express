@@ -17,6 +17,7 @@ const CartItem = ({ item }) => {
   };
 
   const onChange = (e) => {
+    
     const value = e.target.value;
     if (value === '0') {
       dispatch({
@@ -40,7 +41,7 @@ const CartItem = ({ item }) => {
     <div className="flex-row">
       <div>
         <img
-          src={`/images/${item.image}`}
+          src={`${item.photo}`}
           alt=""
         />
       </div>
