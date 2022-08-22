@@ -29,8 +29,8 @@ const resolvers = {
       return Product.findOne({ _id: productId });
     },
     checkout: async (parent, args, context) => {
-      const url = "";
-      const order = new Order({ products: args.products });
+      const url = args.products.photo ;
+      const order = new Order({ products: args.products._id });
       const line_items = [];
 
       const { products } = await order.populate('products');
