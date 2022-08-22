@@ -13,6 +13,7 @@ import Signup from './pages/Signup';
 import Products from './pages/Products';
 import Product from './pages/Product';
 import Header from './components/Header';
+import Success from './pages/Success';
 import { StoreProvider } from './utils/GlobalState';
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -63,6 +64,12 @@ function App() {
                 path="*"
                 element={<NotFound />}
               />
+
+              <Route 
+                path="/success" 
+                element={<Success />} 
+              />
+
               <Route path="/products" element={<Products/>}/>
 
               <Route path="/product/:productId" element={<Product/>}/>
