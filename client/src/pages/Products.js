@@ -6,7 +6,9 @@ import { useStoreContext } from '../utils/GlobalState';
 import Productitem from '../components/Productitem/Productitem';
 import { idbPromise } from '../utils/helpers';
 import { QUERY_CATEGORIES, QUERY_PRODUCTS_BY_CATEGORY, QUERY_PRODUCTS } from '../utils/queries';
+import Cart from '../components/Cart/cart';
 import "../components/Products/products.css"
+
 
 
 const Products = () => {
@@ -100,12 +102,14 @@ const handleClick = async (category) => {
                     <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                         { showProductFilter(data, dataProducts)}
                          <button onClick={showcart}>Hello Click me</button>
+
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    <Cart/>
 </div>
     );
 
