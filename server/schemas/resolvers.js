@@ -29,8 +29,7 @@ const resolvers = {
       return Product.findOne({ _id: productId });
     },
     checkout: async (parent, args, context) => {
-      const url = args.products.photo ;
-      const order = new Order({ products: args.products._id });
+      const order = new Order({ products: args.products });
       const line_items = [];
 
       const { products } = await order.populate('products');
@@ -39,7 +38,7 @@ const resolvers = {
         const product = await stripe.products.create({
           name: products[i].name,
           description: products[i].description,
-          images: [`${url}/images/${products[i].image}`]
+          images: [`${products[i].image}`]
         });
 
         const price = await stripe.prices.create({
