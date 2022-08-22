@@ -29,6 +29,7 @@ const resolvers = {
       return Product.findOne({ _id: productId });
     },
     checkout: async (parent, args, context) => {
+      const url = new URL(context.headers.referer).origin;
       const order = new Order({ products: args.products });
       const line_items = [];
 
@@ -52,18 +53,26 @@ const resolvers = {
           quantity: 1
         })
       }
-
+      console.log('run')
+try{
       const session = await stripe.checkout.sessions.create({
+       
         payment_method_types: ['card'],
         line_items,
         mode: 'payment',
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`
       });
+      
+      console.log('run');
       console.log(session);
       return { session: session.id };
+    } catch (e){
+      console.log(e)
     }
-  
+    } 
+
+   
   },
 
   Mutation: {
