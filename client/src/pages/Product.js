@@ -4,11 +4,63 @@ import { QUERY_PRODUCT_BY_ID } from "../utils/queries";
 import { useParams } from 'react-router-dom';
 // import "https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css";
 const Product = () => {
+    const [state, dispatch] = useStoreContext();
     const {productId} = useParams();
+    const [currentProduct, setCurrentProduct] = useState({});
     console.log(productId);
     const {loading, error, data} = useQuery(QUERY_PRODUCT_BY_ID, {
         variables: { productId: productId},
     });
+
+    useEffect(() => {
+        // already in global store
+        if (products.length) {
+          setCurrentProduct(products.find((product) => product._id === id));
+        }
+        // retrieved from server
+        else if (data) {
+          dispatch({
+            type: UPDATE_PRODUCTS,
+            products: data.products,
+          });
+    
+          data.products.forEach((product) => {
+            idbPromise('products', 'put', product);
+          });
+        }
+        // get cache from idb
+        else if (!loading) {
+          idbPromise('products', 'get').then((indexedProducts) => {
+            dispatch({
+              type: UPDATE_PRODUCTS,
+              products: indexedProducts,
+            });
+          });
+        }
+      }, [products, data, loading, dispatch, id]);
+
+    const addToCart = () => {
+        const itemInCart = cart.find((cartItem) => cartItem._id === id);
+        if (itemInCart) {
+          dispatch({
+            type: UPDATE_CART_QUANTITY,
+            _id: id,
+            purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+          });
+          idbPromise('cart', 'put', {
+            ...itemInCart,
+            purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+          });
+        } else {
+          dispatch({
+            type: ADD_TO_CART,
+            product: { ...currentProduct, purchaseQuantity: 1 },
+          });
+          idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
+        }
+      };
+
+
     console.log(data);
     if(loading) return (<h1>loading</h1>);
     if (error) return (<h1>`Error! {error.message}`</h1>);
@@ -38,7 +90,7 @@ const Product = () => {
                                     {/* <span className="text-2xl leading-none align-baseline">.99</span> */}
                                 </div>
                                 <div className="inline-block align-bottom">
-                                    <button className="bg-amber-900 dark:bg-gray-900 opacity-75 hover:opacity-100 text-gray-100 dark:text-gray-300 rounded-full px-10 py-2 font-semibold"><i className="mdi mdi-cart -ml-2 mr-2"></i> BUY NOW</button>
+                                    <button className="bg-amber-900 dark:bg-gray-900 opacity-75 hover:opacity-100 text-gray-100 dark:text-gray-300 rounded-full px-10 py-2 font-semibold" onClick={addToCart}><i className="mdi mdi-cart -ml-2 mr-2"></i> BUY NOW</button>
                                 </div>
                             </div>
                         </div>
