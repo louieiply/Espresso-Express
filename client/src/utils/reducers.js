@@ -2,6 +2,7 @@ import { useReducer } from "react";
 import {
     UPDATE_PRODUCTS,
     ADD_TO_CART,
+    UPDATE_CART_QUANTITY
 } from "./actions";
 
 export const reducer = (state, action) => {
@@ -19,6 +20,17 @@ export const reducer = (state, action) => {
                 ...state,
                 cartOpen: true,
                 cart: [...state.cart, action.product],
+            };
+        case UPDATE_CART_QUANTITY:
+            return {
+                ...state,
+                cartOpen: true,
+                cart: state.cart.map(product => {
+                    if( action._id === product._id) {
+                        product.purchaseQuantity = action.purchaseQuantity
+                    }
+                    return product
+                })
             };
     }
 }

@@ -65,7 +65,9 @@ const showProductCounter = (data, dataProducts) => {
     //     return (<a href="#" className="block font-medium text-gray-500 dark:text-gray-300 hover:underline">Milk</a>)
         
     // }
-
+const showcart = () => {
+    return console.log(state);
+}
 
 const handleClick = async (category) => {
     console.log(category._id);
@@ -97,7 +99,7 @@ const handleClick = async (category) => {
 
                     <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                         { showProductFilter(data, dataProducts)}
-                         
+                         <button onClick={showcart}>Hello Click me</button>
                     </div>
                 </div>
             </div>
